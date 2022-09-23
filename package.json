@@ -1,6 +1,6 @@
 {
   "name": "senvf",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "A secure & sensible replacement for process.env",
   "license": "MIT",
   "author": "Connor Burton",
@@ -20,12 +20,15 @@
     "lint:check": "yarn eslint",
     "lint:fix": "yarn eslint --fix",
     "style:check": "prettier . --check",
-    "style:fix": "prettier . --write",
-    "release": "standard-version"
+    "style:fix": "prettier . --write"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/node": "^18.7.19",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
@@ -33,7 +36,7 @@
     "eslint": "^8.23.1",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
-    "standard-version": "^9.5.0",
+    "semantic-release": "^19.0.5",
     "ts-node": "^10.9.1",
     "typedoc": "^0.23.15",
     "typescript": "^4.8.3"
@@ -44,6 +47,28 @@
     },
     "nodeArguments": [
       "--loader=ts-node/esm"
+    ]
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
     ]
   }
 }
