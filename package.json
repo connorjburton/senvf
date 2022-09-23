@@ -12,6 +12,7 @@
   "engines": {
     "node": ">=6.4.0"
   },
+  "main": "dist/index.js",
   "scripts": {
     "prepare": "tsc",
     "test": "ava",
