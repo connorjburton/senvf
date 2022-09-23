@@ -5,3 +5,5 @@ docs
 .eslintrc.js
 tsconfig.json
 .prettierignore
+.github
+commitlint.config.cjs
