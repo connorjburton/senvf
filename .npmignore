@@ -1,0 +1,7 @@
+index.ts
+index.test.ts
+docs
+.husky
+.eslintrc.js
+tsconfig.json
+.prettierignore

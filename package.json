@@ -1,0 +1,48 @@
+{
+  "name": "senvf",
+  "version": "1.0.0",
+  "description": "A secure & sensible replacement for process.env",
+  "license": "MIT",
+  "author": "Connor Burton",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connorjburton/hmac-auth-express.git"
+  },
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "scripts": {
+    "prepare": "tsc",
+    "test": "ava",
+    "docs": "typedoc index.ts",
+    "lint:check": "yarn eslint",
+    "lint:fix": "yarn eslint --fix",
+    "style:check": "prettier . --check",
+    "style:fix": "prettier . --write",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/node": "^18.7.19",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "ava": "^4.3.3",
+    "eslint": "^8.23.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.15",
+    "typescript": "^4.8.3"
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=ts-node/esm"
+    ]
+  }
+}
