@@ -50,8 +50,14 @@ connect({
 
 ## FAQs
 
-_Can I set properties on `senvf`?_ No, the `senvf` object is frozen and is not meant to represent configuration. You _can_ workaround this by setting properties on `process.env` but it is **highly** advised against.
+**Can I set properties on `senvf`?**
 
-_Code I use relies on `process.env` having `x` property, how can I use `senvf`?_ Due to the nature of supply chain attacks, `senvf` does not allow any code to set values on `process.env`. Therefore change the code requiring `process.env` to instead accept an argument and pass the value in from `senvf.get`
+No, the `senvf` object is frozen and is not meant to represent configuration. You _can_ workaround this by setting properties on `process.env` but it is **highly** advised against.
 
-_We use packages that sets values on `process.env` dynamically, how can I use `senvf`?_ Any properties set on `process.env` will instead automatically be set on `senvf` by proxy, you can access those values using `senvf.get`
+**Code I use relies on `process.env` having `x` property, how can I use `senvf`?**
+
+Due to the nature of supply chain attacks, `senvf` does not allow any code to set values on `process.env`. Therefore change the code requiring `process.env` to instead accept an argument and pass the value in from `senvf.get`
+
+**We use packages that sets values on `process.env` dynamically, how can I use `senvf`?**
+
+Any properties set on `process.env` will instead automatically be set on `senvf` by proxy, you can access those values using `senvf.get`

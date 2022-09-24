@@ -18,7 +18,7 @@ test("can't get process.env that was originally set on process.env", async (t) =
 test("can't set process.env", async (t) => {
   await importFile();
   t.is(typeof process.env.hello, "undefined");
-  process.env.hello = "worldd";
+  process.env.hello = "world";
   t.is(typeof process.env.hello, "undefined");
 });
 
