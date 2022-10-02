@@ -64,7 +64,7 @@
 <p>Due to the nature of supply chain attacks, <code>senvf</code> does not allow any code to set values on <code>process.env</code>. Therefore change the code requiring <code>process.env</code> to instead accept an argument and pass the value in from <code>senvf.get</code>.</p>
 <p><strong>We use packages that sets values on <code>process.env</code> dynamically, how can I use <code>senvf</code>?</strong></p>
 <p>Any properties set on <code>process.env</code> will instead automatically be set on <code>senvf</code> by proxy, you can access those values using <code>senvf.get</code>.</p>
-<p><strong>Why is everything <code>unknown</code></strong></p>
+<p><strong>Why is everything <code>unknown</code>?</strong></p>
 <p>Properties on <code>process.env</code> can be set to any data type. Even if you set <code>process.env.foo = &#39;bar&#39;;</code> there is no guarantee when you come to read <code>foo</code> that other code has not set it to another data type.</p>
 <p>For this reason we can never guarantee the data type of the returned value of <code>senvf</code> and we do not impose an extra restrictions onto <em>what</em> data types can be set, as we aim to be as backwards compatible as possible.</p>
 </div></div>
