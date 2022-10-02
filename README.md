@@ -64,7 +64,7 @@ Due to the nature of supply chain attacks, `senvf` does not allow any code to se
 
 Any properties set on `process.env` will instead automatically be set on `senvf` by proxy, you can access those values using `senvf.get`.
 
-**Why is everything `unknown`**
+**Why is everything `unknown`?**
 
 Properties on `process.env` can be set to any data type. Even if you set `process.env.foo = 'bar';` there is no guarantee when you come to read `foo` that other code has not set it to another data type.
 
