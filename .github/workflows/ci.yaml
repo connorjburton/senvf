@@ -1,13 +1,11 @@
-name: Node.js CI
-
+name: CI
 on: [pull_request]
-
 jobs:
   buildlinux:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [17.x]
+        node-version: [16.x]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
