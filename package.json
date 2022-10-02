@@ -14,7 +14,8 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "tsc",
+    "prepublishOnly": "tsc",
+    "prepare": "husky install",
     "test": "ava",
     "docs": "typedoc index.ts",
     "lint:check": "yarn eslint",
