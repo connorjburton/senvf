@@ -38,6 +38,44 @@ test("has returns false if property not set", async (t) => {
   t.is(senvf.default.has("ab"), false);
 });
 
+// even those these tests are not type safe, this package can be used
+// outside of TS, so we still need to test
+
+test("can be set to number", async (t) => {
+  const senvf = await importFile();
+  // @ts-ignore
+  process.env.foo = 1;
+  t.is(senvf.default.get("foo"), 1);
+});
+
+test("can be set to object", async (t) => {
+  const senvf = await importFile();
+  // @ts-ignore
+  process.env.foo = { a: "b" };
+  t.deepEqual(senvf.default.get("foo"), { a: "b" });
+});
+
+test("can be set to array", async (t) => {
+  const senvf = await importFile();
+  // @ts-ignore
+  process.env.foo = ["a", "b"];
+  t.deepEqual(senvf.default.get("foo"), ["a", "b"]);
+});
+
+test("can be set to null", async (t) => {
+  const senvf = await importFile();
+  // @ts-ignore
+  process.env.foo = null;
+  t.is(senvf.default.get("foo"), null);
+});
+
+test("can be set to function", async (t) => {
+  const senvf = await importFile();
+  // @ts-ignore
+  process.env.foo = () => {};
+  t.is(typeof senvf.default.get("foo"), "function");
+});
+
 test("cannot get properties directly", async (t) => {
   const senvf = await importFile();
   // @ts-ignore
