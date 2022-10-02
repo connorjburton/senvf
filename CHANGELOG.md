@@ -1,3 +1,14 @@
+# [2.0.0](https://github.com/connorjburton/senvf/compare/v1.0.1...v2.0.0) (2022-10-02)
+
+
+* fix!: change fallback logic & update return type ([55be33f](https://github.com/connorjburton/senvf/commit/55be33ffcff57a8f0c4ad40f9a5b2039ad74488e))
+
+
+### BREAKING CHANGES
+
+* no longer uses fallback value for falsey values (null)
+return types have been updated to unknown rather than string | undefined
+
 ## [1.0.1](https://github.com/connorjburton/senvf/compare/v1.0.0...v1.0.1) (2022-09-24)
 
 ### Bug Fixes

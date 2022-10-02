@@ -63,3 +63,9 @@ Due to the nature of supply chain attacks, `senvf` does not allow any code to se
 **We use packages that sets values on `process.env` dynamically, how can I use `senvf`?**
 
 Any properties set on `process.env` will instead automatically be set on `senvf` by proxy, you can access those values using `senvf.get`.
+
+**Why is everything `unknown`**
+
+Properties on `process.env` can be set to any data type. Even if you set `process.env.foo = 'bar';` there is no guarantee when you come to read `foo` that other code has not set it to another data type.
+
+For this reason we can never guarantee the data type of the returned value of `senvf` and we do not impose an extra restrictions onto _what_ data types can be set, as we aim to be as backwards compatible as possible.
