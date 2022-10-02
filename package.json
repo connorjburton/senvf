@@ -22,7 +22,7 @@
     "lint:fix": "yarn eslint --fix",
     "style:check": "prettier . --check",
     "style:fix": "prettier . --write",
-    "spell:check": "cspell **/**"
+    "spell:check": "cspell **/** --no-must-find-files"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
