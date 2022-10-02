@@ -21,7 +21,8 @@
     "lint:check": "yarn eslint",
     "lint:fix": "yarn eslint --fix",
     "style:check": "prettier . --check",
-    "style:fix": "prettier . --write"
+    "style:fix": "prettier . --write",
+    "spell:check": "cspell **/**"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -34,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
     "ava": "^4.3.3",
+    "cspell": "^6.12.0",
     "eslint": "^8.23.1",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
