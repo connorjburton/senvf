@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/connorjburton/senvf/compare/v1.0.0...v1.0.1) (2022-09-24)
+
+### Bug Fixes
+
+- bump for v1.0.1 ([26f2a32](https://github.com/connorjburton/senvf/commit/26f2a322cd314512c467e9b0ca5cb00dac7bc835))
+
 # 1.0.0 (2022-09-24)
 
 ### Bug Fixes

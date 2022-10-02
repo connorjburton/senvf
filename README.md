@@ -6,12 +6,12 @@ A secure & sensible replacement for `process.env`.
 
 ## Why?
 
-- Most JavaScript supply chain attacks target the `process.env` object.
+- Most JavaScript supply chain attacks target the `process.env` object
 - It's common to see `process.env` values being used without the correct data type checks
 
 ## How does this help?
 
-- Ensures `process.env` is always empty, a supply chain attack that `POST`s your `process.env` content to a remote server no longer poses a risk.
+- Ensures `process.env` is always empty, a supply chain attack that `POST`s your `process.env` content to a remote server no longer poses a risk
 - Provides `has`/`get` helper functions
 
 ## Installation
@@ -58,8 +58,8 @@ No, the `senvf` object is frozen and is not meant to represent configuration. Yo
 
 **Code I use relies on `process.env` having `x` property, how can I use `senvf`?**
 
-Due to the nature of supply chain attacks, `senvf` does not allow any code to set values on `process.env`. Therefore change the code requiring `process.env` to instead accept an argument and pass the value in from `senvf.get`
+Due to the nature of supply chain attacks, `senvf` does not allow any code to set values on `process.env`. Therefore change the code requiring `process.env` to instead accept an argument and pass the value in from `senvf.get`.
 
 **We use packages that sets values on `process.env` dynamically, how can I use `senvf`?**
 
-Any properties set on `process.env` will instead automatically be set on `senvf` by proxy, you can access those values using `senvf.get`
+Any properties set on `process.env` will instead automatically be set on `senvf` by proxy, you can access those values using `senvf.get`.

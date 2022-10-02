@@ -1,6 +1,6 @@
 {
   "name": "senvf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A secure & sensible replacement for process.env",
   "license": "MIT",
   "author": "Connor Burton",
