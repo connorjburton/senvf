@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/connorjburton/senvf/compare/v2.0.0...v2.0.1) (2022-10-02)
+
+
+### Bug Fixes
+
+* add types property to package json ([17634d2](https://github.com/connorjburton/senvf/commit/17634d2b2e57ee32f04e5d6053761834c4532f47))
+* ignore unnecessary files, reduce build size from 38.8kb to 2.9kb ([6d86e1b](https://github.com/connorjburton/senvf/commit/6d86e1b76adcc185835aebfba3ae945076db52ca))
+
 # [2.0.0](https://github.com/connorjburton/senvf/compare/v1.0.1...v2.0.0) (2022-10-02)
 
 
