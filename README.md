@@ -40,7 +40,7 @@ On the **first** import of `senvf` it will copy all values from `process.env` an
 import "dotenv/config";
 import senvf from "senvf";
 
-if (!senvf.has("DATABASE_PASWORD")) {
+if (!senvf.has("DATABASE_PASSWORD")) {
   throw new Error("Database password not set");
 }
 

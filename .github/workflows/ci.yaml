@@ -1,7 +1,7 @@
 name: CI
 on: [pull_request]
 jobs:
-  buildlinux:
+  ci:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -16,4 +16,5 @@ jobs:
       - run: yarn
       - run: yarn lint:check
       - run: yarn style:check
+      - run: yarn spell:check
       - run: yarn test
