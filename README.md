@@ -1,5 +1,3 @@
-![logo](https://github.com/connorjburton/senvf/blob/master/logo.jpg)
-
 # senvf
 
 A secure & sensible replacement for `process.env`.
